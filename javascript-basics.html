@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript-Basics</title>
+</head>
+
+<body>
+    <p id="a1"></p>
+    <p id="a2"></p>
+    <p id="a3"></p>
+    <p id="a4"></p>
+    <p id="a5"></p>
+    <p id="a6"></p>
+    <p id="a7"></p>
+    <p id="a8"></p>
+    <p id="a9"></p>
+    <p id="a10"></p>
+    <p id="a11"></p>
+    <p id="a12"></p>
+    <p id=""></p>
+    <p id=""></p>
+    <p id=""></p>
+    <p id=""></p>
+    <p id=""></p>
+    <script>
+        /* JavaScript Datatypes--> */
+        /* Javascript variables can hold many data types */
+        var number = 16;
+        var string = "Mayur";
+        var string1 = 'Mayur';
+        var boolean = true;
+        var object = {
+            firstName: "Mayur",
+            lastName: 'Attarde',
+            age: 21
+        };
+        console.log(number, string);
+        document.getElementById("a1").innerHTML = number;
+        document.getElementById("a2").innerHTML = string;
+        document.getElementById("a3").innerHTML = string1;
+        document.getElementById("a4").innerHTML = boolean;
+        document.getElementById("a5").innerHTML = object.firstName;
+        document.getElementById("a6").innerHTML = object.lastName;
+        document.getElementById("a7").innerHTML = object.firstName + " is " + object.age + " years old.";
+        console.log(string1, boolean, object.firstName, object.lastName);
+
+        /* When adding a number and a string , JavaScript will treat the number as String */
+        var x = 367 + "Mayur";
+        var x1 = "Mayur" + 367;
+        var x2 = 27 + 3 + 2 + "Vishal";
+        var x3 = "Vishal" + 27 + 3 + 2; /* Will treat number as String */
+        console.log(x, x1, x2, x3);
+
+        /* JavaScript Booleans */
+        var a1 = 1;
+        var a2 = 1;
+        var a3 = 3;
+        document.getElementById("a8").innerHTML = (a1 == a2) + "<br>" + (a3 == a2);
+
+        /* JavaScript Arrays */
+        var array = ["sara", "Mars", "Venus", "sun"];
+        document.getElementById("a9").innerHTML = array;
+        console.log(array[0], array[1], array[3]);
+        for (i = 0; i < array.length; i++) {
+            console.log(array[i]);
+            document.getElementById("a10").innerHTML = (array[i]); // will print only last array element
+        }
+
+        /* while loop */
+        console.log("********While loop");
+        var z = 0;
+        while (z < array.length) {
+            console.log(array[z]);
+            z++;
+        }
+        /* Do while loop */
+        console.log("*********Do while loop");
+        var j = 0;
+        do {
+            console.log(array[j]);
+            j++;
+        } while (j < array.length);
+
+        /* JavaScript Functions*/
+        var q = myFunction(4, 3);
+        document.getElementById("a11").innerHTML = q;
+
+        function myFunction(a4, b) {
+            return a4 * b;
+        }
+
+        function myFunction1() {
+            return 4 * 3;
+        }
+        document.getElementById("a12").innerHTML = myFunction1;
+    </script>
+</body>
+
+</html>
